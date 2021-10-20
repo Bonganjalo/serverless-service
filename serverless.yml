@@ -7,6 +7,9 @@ plugins:
   - serverless-plugin-existing-s3
   - serverless-webpack
 
+custom:
+  private: true
+
 provider:
   name: aws
   runtime: nodejs14.x 
@@ -31,6 +34,11 @@ functions:
     handler: functions/service.handler
     memorySize: 196
     timeout: 10
+    events:
+      - http:
+          method: post
+          path: /api/v1/
+          private: ${self:custom.private}
             
  
 
