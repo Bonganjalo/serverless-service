@@ -5,7 +5,7 @@
   "scripts": {
     "deploy:service": "serverless deploy function -f service --aws-profile testProfile",
     "lint": "tslint --project tsconfig.json **/*.ts",
-    "local:service": "serverless invoke local --function service",
+    "local:service": "serverless invoke local --function service --path events/service.json",
     "remote:service": "serverless invoke --function service",
     "tail:service:dev": "serverless logs --function service --tail --stage dev --aws-profile testProfile",
     "test": "jest --watchAll --colors --coverage",
