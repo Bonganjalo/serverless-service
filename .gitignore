@@ -75,6 +75,10 @@ typings/
 # parcel-bundler cache (https://parceljs.org/)
 .cache
 
+# Build directories
+.webpack
+.build
+
 # Next.js build output
 .next
 
