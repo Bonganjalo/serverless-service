@@ -5,7 +5,7 @@
   "scripts": {
     "deploy:api": "serverless deploy function -f api",
     "lint": "tslint --project tsconfig.json **/*.ts",
-    "local:api": "serverless invoke local --function api --path events/request.json.json",
+    "local:api": "serverless invoke local --function api --path events/request.json",
     "remote:api": "serverless invoke --function api",
     "tail:api:dev": "serverless logs --function api --tail --stage dev",
     "test": "jest --watchAll --colors --coverage",
