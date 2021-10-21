@@ -1,13 +1,13 @@
 {
   "name": "serverless-service",
   "version": "1.0.0",
-  "main": "service.js",
+  "main": "api.js",
   "scripts": {
-    "deploy:service": "serverless deploy function -f service --aws-profile testProfile",
+    "deploy:api": "serverless deploy function -f api",
     "lint": "tslint --project tsconfig.json **/*.ts",
-    "local:service": "serverless invoke local --function service --path events/service.json",
-    "remote:service": "serverless invoke --function service",
-    "tail:service:dev": "serverless logs --function service --tail --stage dev --aws-profile testProfile",
+    "local:api": "serverless invoke local --function api --path events/request.json.json",
+    "remote:api": "serverless invoke --function api",
+    "tail:api:dev": "serverless logs --function api --tail --stage dev",
     "test": "jest --watchAll --colors --coverage",
     "test:ci": "jest --ci --colors --coverage --passWithNoTests"
   },

@@ -30,8 +30,8 @@ provider:
 #Lambda functions
 functions:
 
-  service:
-    handler: functions/service.handler
+  api:
+    handler: functions/api.handler
     memorySize: 196
     timeout: 10
     events:
